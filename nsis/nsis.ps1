@@ -5,10 +5,6 @@ param(
 	[string]$includeMorePlugins
 )
 
-# Installs VstsTaskLib
-Install-PackageProvider -Name NuGet -Force -Scope CurrentUser
-Install-Module -Name VstsTaskSdk -Force -Verbose -Scope CurrentUser
-
 foreach($key in $PSBoundParameters.Keys)
 {
     Write-Host ($key + ' = ' + $PSBoundParameters[$key])
